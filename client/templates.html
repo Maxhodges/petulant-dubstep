@@ -1,0 +1,26 @@
+<head>
+  <title>period</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> dataEditor}}
+</body>
+
+<template name="dataEditor">
+  <table>
+    <tr>
+      <td>Numerator</td>
+      {{#each periods}}
+        <td>
+          <input
+            class="table-item-input"
+            data-itemid="{{_id}}"
+            data-datatype="numerator" data-dept="{{dept}}"
+            data-timestamp="{{timestamp}}" data-measure="{{measure}}"
+            value="{{dataPointValue dataType="numerator" timestamp=timestamp }}">
+        </td>
+      {{/each}}
+    </tr>
+  </table>
+</template>

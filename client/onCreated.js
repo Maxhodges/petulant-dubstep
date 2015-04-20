@@ -1,0 +1,6 @@
+Template.dataEditor.onCreated({
+
+
+
+
+})
